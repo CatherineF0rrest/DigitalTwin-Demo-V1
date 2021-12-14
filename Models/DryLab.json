@@ -1,0 +1,146 @@
+{
+    "@id": "dtmi:digitaltwins:room:LaboratoryDry;1",
+    "@type": "Interface",
+    "displayName": "DryLaboratory",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+{
+      "@type": ["Property", "RelativeHumidity"],
+      "name": "humiditySensor",
+      "writable": true,
+      "schema": "double",
+      "unit": "percent"
+    },
+
+    {
+      "@type": ["Property", "RelativeHumidity"],
+      "name": "humiditySetpoint",
+      "writable": true,
+      "schema": "double",
+      "unit": "percent"
+    },
+
+    {
+      "@type": ["Property", "RelativeHumidity"],
+      "name": "humidityDelta",
+      "writable": true,
+      "schema": "double",
+      "unit": "percent"
+    },
+
+    {
+        "@type": "Property",
+        "name": "temperatureSensor",
+        "writable": true,
+        "schema": "double"
+      },
+
+      {
+        "@type": "Property",
+        "name": "temperatureSetpoint",
+        "writable": true,
+        "schema": "double"
+      },
+
+      {
+        "@type": "Property",
+        "name": "temperatureDelta",
+        "writable": true,
+        "schema": "double"
+      },
+
+      {
+        "@type": "Property",
+        "name": "CO2Sensor",
+        "writable": true,
+        "schema": "double",
+        "comment": "ppm"
+      },
+
+      {
+        "@type": "Property",
+        "name": "CO2Setpoint",
+        "writable": true,
+        "schema": "double",
+        "comment": "ppm"
+      },
+
+      {
+        "@type": "Property",
+        "name": "CO2Delta",
+        "writable": true,
+        "schema": "double",
+        "comment": "ppm"
+      },
+  
+      {
+        "@type": ["Property", "TimeSpan"],
+        "name": "dwellTimeAverage",
+        "writable": true,
+        "schema": "double",
+        "unit": "second",
+        "comment": "Average time spent in the space by all individuals in the space"
+      },
+
+      {
+        "@type": "Property",
+        "name": "peopleCount",
+        "writable": true,
+        "schema": "double"
+      },
+
+      {
+        "@type": "Property",
+        "name": "hasInferredOccupancy",
+        "writable": true,
+        "schema": "boolean"
+      },
+
+      {
+        "@type": "Property",
+        "name": "isOccupied",
+        "displayName": {
+          "en": "Is Occupied"
+        },
+        "writable": true,
+        "schema": "boolean"
+      },
+
+      {
+        "@type": "Property",
+        "name": "maxOccupancy",
+        "writable": true,
+        "schema": "integer",
+        "comment": "Building Code Occupancy"
+      },
+
+      {
+        "@type": "Property",
+        "name": "grossArea",
+        "writable": true,
+        "schema": "double",
+        "comment": "squareFoot"
+      },
+
+      {
+        "@type": "Property",
+        "name": "usableArea",
+        "writable": true,
+        "schema": "double",
+        "comment": "squareFoot"
+      },
+
+      {
+        "@type":"Property",
+        "name":"Description",
+        "schema":"string",
+        "description": "A LaboratoryDry is a laboratory where computational or applied mathematical analyses are done on a computer-generated model to simulate a phenomenon in the physical realm."
+    },
+    {
+        "@type": "Relationship",
+        "description": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart",
+        "name": "isPartOf",
+        "target": "dtmi:digitaltwins:building:MewpulBuilding;1"
+    }
+    ]
+  }
