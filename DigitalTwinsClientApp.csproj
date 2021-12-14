@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <AssemblyName>DigitalTwinsClientApp</AssemblyName>
+      <RootNamespace>DigitalTwinsClientApp</RootNamespace>
+      <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+      <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+      <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+      <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+      <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+      <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+      <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Core" Version="1.21.0" />
+      <PackageReference Include="Azure.DigitalTwins.Core" Version="1.2.2" />
+      <PackageReference Include="Azure.Identity" Version="1.4.0" />
+      <PackageReference Include="Microsoft.Azure.DigitalTwins.Parser" Version="4.0.8-preview" />
+      <PackageReference Include="Microsoft.Extensions.Azure" Version="1.1.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+      <PackageReference Include="System.Collections" Version="4.3.0" />
+      <PackageReference Include="System.IO" Version="4.3.0" />
+      <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+    <None Update="Models\MewpulBuilding.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Models\WetLab.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Models\DryLab.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+  </Project>
